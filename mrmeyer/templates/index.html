@@ -1,0 +1,627 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/froala-design-blocks/1.0.2/css/froala_blocks.min.css">
+
+    <link rel="icon" href="{% static 'images/logo1.png' %}"> 
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% block styles %}{% endblock styles %}">
+    <title>Mr.Meyer Cleaning</title>
+
+</head>
+<body>
+  <header class="bg-transparent">
+    <div class="container">
+      <nav class="navbar fixed-top navbar-expand-md">
+        <a class="navbar-brand" href="{% url "home" %}">
+          <img src="{% static "images/logo1.png"%}" height="80" width="100" alt="logo">
+        </a>
+  
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav11" aria-controls="navbarNav11" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+  
+        <div class="collapse navbar-collapse" id="navbarNav11">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="{% url 'home' %}">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#product">Products</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact Us</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  {% block content %}
+
+  <!-- Carousel One -->
+
+  <div class="container">
+    <div class="row" id="product">
+      <div class="col-md-12">
+        <h2><b>Detergents</b></h2>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel" data-slide-to="1"></li>
+        </ol>   
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{% static 'images/products/All-Purpose-Cleaner-APC25.jpg' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>All Purpose Cleaner <em>1L</em></h4>
+                    <p class="item-price"><span>R{{ allpurposecleaner1l.price }}</span></p>
+                  </div>						
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{% static 'images/products/Dishwash-Super-Green-1L-DWS1.png' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Dishwash Super <em>1L</em></h4>
+                    <p class="item-price"><span>R{{ dishwashsuper1l.price }}</span></p>
+                  </div>						
+                </div>
+              </div>		
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{% static 'images/products/Fat-Degreaser-1L-FD1.jpg' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Fat Degreaser <em>1L</em></h4>
+                    <p class="item-price"><span>R{{ fatdegreaser1l.price }}</span></p>        
+                  </div>						
+                </div>
+              </div>								
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{% static 'images/products/Handy-Kleen-Citro-5L-HKC5.jpg' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Handy Clean <em>5L</em></h4>
+                    <p class="item-price"><span>R{{ handyclean5l.price }}</span></p>
+                  </div>						
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{% static 'images/products/Pine-Gel-2L-PG2-600x399.png' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Pine Gel <em>1L</em></h4>
+                    <p class="item-price"><span>R{{ pinegel1l.price }}</span></p>
+                  </div>						
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{% static 'images/products/Heavy-Duty-Cleaner-1L-HD1.jpg' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Heavy Duty Cleaner <em>1L</em></h4>
+                    <p class="item-price"><span>R{{ heavydutycleaner1l.price }}</span></p>
+                  </div>						
+                </div>
+              </div>
+            </div>
+          </div>
+
+          </div>
+        </div>
+
+        <!-- Carousel controls -->
+        <a class="carousel-control-prev" href="#myCarousel" data-slide="prev">
+          <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel" data-slide="next">
+          <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+        </a>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+ <div class="text-center">
+   <button class="btn btn-primary text-center">Detergents</button>
+ </div>
+</div>
+
+  <!-- Carousel Two -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2><b>Floor Care</b></h2>
+        <div id="myCarousel1" class="carousel slide" data-ride="carousel" data-interval="0">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel1" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel1" data-slide-to="1"></li>
+        </ol>   
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{% static 'images/products/Floor-Wax-White-1L-FWW1.jpg' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Liquid Floor Wax <em>1L</em></h4>
+                    <p class="item-price"><span>R{{ liquidfloorwax1l.price }}</span></p>
+                  </div>						
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{% static 'images/products/Tile-Brite-TB125.jpg' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Tile Brite <em>5L</em></h4>
+                    <p class="item-price"><span>R{{ tilebrite5l.price }}</span></p>
+                  </div>						
+                </div>
+              </div>		
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{% static 'images/products/Tile-Cleaner-TLC1.jpg' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Tile Cleaner <em>1L</em></h4>
+                    <p class="item-price"><span>R{{ tilecleaner1l.price }}</span></p>        
+                  </div>						
+                </div>
+              </div>								
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{% static 'images/products/Tile-Cleaner-TLC5-300x433.jpg' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Tile Cleaner <em>5L</em></h4>
+                    <p class="item-price"><span>R{{ tilecleaner5l.price }}</span></p>
+                  </div>						
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{% static 'images/products/Tile-Cleaner-TLC25.jpg' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Tile Cleaner <em>25L</em></h4>
+                    <p class="item-price"><span>R{{ tilecleaner25l.price }}</span></p>
+                  </div>						
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{% static 'images/products/Tile-and-Floor-Shine-TB245-600x600.png' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Liquid Floor Wax <em>5L</em></h4>
+                    <p class="item-price"><span>R{{ liquidfloorwax5l.price }}</span></p>
+                  </div>						
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          </div>
+        </div>
+        <!-- Carousel controls -->
+        <a class="carousel-control-prev" href="#myCarousel1" data-slide="prev">
+          <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel1" data-slide="next">
+          <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+        </a>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="text-center">
+      <button class="btn btn-primary text-center">Floor Care</button>
+    </div>
+   </div>
+
+  <!-- Carousel Three -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2><b>Sanatizer & Disinfectant</b></h2>
+        <div id="myCarousel2" class="carousel slide" data-ride="carousel" data-interval="0">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel2" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel2" data-slide-to="1"></li>
+        </ol>   
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{% static 'images/products/Black-Fluid-1L-BD1.png' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Black Fluid <em>1L</em></h4>
+                    <p class="item-price"><span>R{{ blackfluid1l.price }}</span></p>
+                  </div>						
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{% static 'images/products/Bleach-Thick-1L-BLT1.jpg' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Thick Bleach <em>1L</em></h4>
+                    <p class="item-price"><span>R{{ thickbleach1l.price }}</span></p>
+                  </div>						
+                </div>
+              </div>		
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{% static 'images/products/Savtol-ST1.png' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Savtol <em>750ml</em></h4>
+                    <p class="item-price"><span>R{{ savtol750ml.price }}</span></p>        
+                  </div>						
+                </div>
+              </div>								
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{% static 'images/products/Toilet-Bowl-Cleaner-TBC750.jpg' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Toilet Bowl Cleaner <em>1L</em></h4>
+                    <p class="item-price"><span>R{{ toiletbowelcleaner1l.price }}</span></p>
+                  </div>						
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{% static 'images/products/Food-Sanitiser-FSAN1.png' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Food Sanatizer <em>1L</em></h4>
+                    <p class="item-price"><span>R{{ foodsanatizer1l.price }}</span></p>
+                  </div>						
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{% static 'images/products/Drain-Cleaner-Granules-DCG05.jpg' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Drain Cleaner Granules <em>500g</em></h4>
+                    <p class="item-price"><span>R{{ draincleaner500g.price }}</span></p>
+                  </div>						
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          </div>
+        </div>
+
+        <!-- Carousel controls -->
+        <a class="carousel-control-prev" href="#myCarousel2" data-slide="prev">
+          <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel2" data-slide="next">
+          <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+        </a>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="text-center">
+      <button class="btn btn-primary text-center">Disinfectant</button>
+    </div>
+   </div>
+
+  <!-- Carousel Four -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2><b>Car Care</b></h2>
+        <div id="myCarousel3" class="carousel slide" data-ride="carousel" data-interval="0">
+        <!-- Carousel indicators -->
+        <ol class="carousel-indicators">
+          <li data-target="#myCarousel3" data-slide-to="0" class="active"></li>
+          <li data-target="#myCarousel3" data-slide-to="1"></li>
+        </ol>   
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{% static 'images/products/Car-Wash-Wax-WW1.jpg' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Car Wash & Wax <em>1L</em></h4>
+                    <p class="item-price"><span>R{{ carwashandwax1l.price }}</span></p>
+                  </div>						
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{% static 'images/products/Silicone-Tyre-SDO1.jpg' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Tyre & Bumper Shine <em>1L</em></h4>
+                    <p class="item-price"><span>R{{ tyreandbumpershine1l.price }}</span></p>
+                  </div>						
+                </div>
+              </div>		
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{% static 'images/products/Car-Polish-500ml-CARP500.jpg' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Car Polish <em>500ml</em></h4>
+                    <p class="item-price"><span>R{{ carpolish500ml.price }}</span></p>        
+                  </div>						
+                </div>
+              </div>								
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{% static 'images/products/Dash-Tyre-Shine-5L-DTS5.jpg' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Dash Protector <em>500ml</em></h4>
+                    <p class="item-price"><span>R{{ dashprotector500ml.price }}</span></p>
+                  </div>						
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div class="row">
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{% static 'images/products/Hand-sanitizer-GK10-70percent-HYG06044.png' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Hand Sanatizer <em>500ml</em></h4>
+                    <p class="item-price"><span>{{ handsanatizer500ml.price }}</span></p>
+                  </div>						
+                </div>
+              </div>
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{% static 'images/products/Silicone-Tyre-SDO5.jpg' %}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>Tyre And Bumper Shine <em>5L</em></h4>
+                    <p class="item-price"><span>R{{ tyreandbumpershine5l.price }}</span></p>
+                  </div>						
+                </div>
+              </div>
+            </div>
+          </div>
+
+          </div>
+        </div>
+        <!-- Carousel controls -->
+        
+        <a class="carousel-control-prev" href="#myCarousel3" data-slide="prev">
+          <i class="fa fa-arrow-circle-left" aria-hidden="true"></i>
+        </a>
+        <a class="carousel-control-next" href="#myCarousel3" data-slide="next">
+          <i class="fa fa-arrow-circle-right" aria-hidden="true"></i>
+        </a>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="text-center">
+      <button class="btn btn-primary text-center">Car Care</button>
+    </div>
+   </div>
+<!-- Carousels end -->
+
+<!-- Lottie Animation -->
+
+<div>
+<lottie-player class="lottie" src="https://assets9.lottiefiles.com/packages/lf20_owpv3ldk.json"  background="transparent"  speed="1"  style="width: 750px; height: 750px; margin-left:100px;"  loop autoplay></lottie-player>
+</div>
+
+<section class="fdb-block">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-6 mb-4 mb-md-0">
+        <img alt="image" class="img-fluid mrm" src="{% static 'images/image-9.png' %}">
+      </div>
+      <div class="col-12 col-md-6 col-lg-5 ml-md-auto text-left">
+        <h1>Ian Meyer</h1>
+        <p class="lead">Meet The Owner Of Mr Meyer Cleaning</p>
+        <p>
+          <a href="#" class="mx-2 text-secondary"><i class="fa-brands fa-whatsapp-square"></i></a>
+          <a href="#" class="mx-2 text-secondary"><i class="fa-brands fa-instagram-square"></i></i></a>
+          <a href="mailto:ian@mrmeyer.co.za" class="mx-2 text-secondary"><i class="fa-solid fa-envelope"></i></a>
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="fdb-block">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-12 col-md-6 mb-4 mb-md-0">
+        <img alt="image" class="img-fluid" src="{{ externalwebsite.imageURL }}">
+      </div>
+      <div class="col-12 col-md-6 col-lg-5 ml-md-auto text-left">
+        <h1>{{ externalwebsite.name }}</h1>
+        <p class="lead">{{ externalwebsite.description }}</p>
+        <p><a class="btn btn-secondary mt-4" href="externalwebsite.link">Visit</a></p>
+      </div>
+    </div>
+  </div>
+  
+  <section class="section" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="title-box text-center">
+                    <h2 class="title-heading mt-4">Contact Us</h2>
+
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5 pt-4">
+            <div class="col-lg-6">
+                <div class="mt-4 home-img text-center">
+                    <div class="animation-2"></div>
+                    <div class="animation-3"></div>
+                    <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_e1y24wm2.json" class="img-fluid"  background="transparent"  speed="1"  style="width: 300px; height: 300px;"  loop  autoplay></lottie-player>
+                </div>
+            </div>
+
+            <div class="col-lg-6">
+                <div class="custom-form mt-4">
+                    <div id="message"></div>
+                    <form method="post" action="mailto:ian@mrmeyer.co.za" name="contact-form" id="contact-form">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <div class="form-group mt-3">
+                                    <label class="contact-lable">First Name</label>
+                                    <input name="name" id="name" class="form-control" type="text">
+                                </div>
+                            </div>
+
+                            <div class="col-lg-6">
+                                <div class="form-group mt-3">
+                                    <label class="contact-lable">Last Name</label>
+                                    <input name="name" id="lastname" class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group mt-3">
+                                    <label class="contact-lable">Email Address</label>
+                                    <input name="email" id="email" class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group mt-3">
+                                    <label class="contact-lable">Subject</label>
+                                    <input name="subject" id="subject" class="form-control" type="text">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12">
+                                <div class="form-group mt-3">
+                                    <label class="contact-lable">Your Message</label>
+                                    <textarea name="comments" id="comments" rows="5" class="form-control"></textarea>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-lg-12 mt-3 text-right">
+                                <input id="submit" name="send" class="submitBnt btn btn-primary btn-round" value="Send Message" type="submit">
+                                <div id="simple-msg"></div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+{% endblock content %}
+</div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="{% static 'js/script.js' %}"></script>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/js/all.min.js" integrity="sha512-6PM0qYu5KExuNcKt5bURAoT6KCThUmHRewN3zUFNaoI6Di7XJPTMoT6K0nsagZKk2OB4L7E3q1uQKHNHd4stIQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</html>

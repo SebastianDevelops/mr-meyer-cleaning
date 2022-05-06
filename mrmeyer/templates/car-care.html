@@ -1,0 +1,140 @@
+{% extends 'index.html' %}
+{% load static %}
+{% block content %}
+<h2>Car Care</h2>
+<div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2><b>One Litres</b></h2>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0"> 
+        <!-- Wrapper for carousel items -->
+        
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              {% for litre in one %}
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{{ litre.imageURL }}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>{{ litre.name }}</h4>
+                    <p class="item-price"><span>R{{ litre.price }}</span></p>
+                  </div>						
+                </div>
+              </div>
+              {% endfor %}
+            </div>
+            </div>
+            </div>
+          </div>
+          </div>
+        </div>
+      </div>
+
+              <div class="container">
+                <div class="row">
+                  <div class="col-md-12">
+                    <h2><b>Five Litres</b></h2>
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">
+                    <!-- Wrapper for carousel items -->
+                    
+                    <div class="carousel-inner">
+                      <div class="carousel-item active">
+                        <div class="row">
+                          {% for litre in five %}
+                          <div class="col-sm-3">
+                            <div class="thumb-wrapper">
+                              <div class="img-box">
+                                <img src="{{ litre.imageURL }}" class="img-fluid" alt="">
+                              </div>
+                              <div class="thumb-content">
+                                <h4>{{ litre.name }}</h4>
+                                <p class="item-price"><span>R{{ litre.price }}</span></p>
+                                
+                              </div>						
+                            </div>
+                          </div>
+                          {% endfor %}
+                        </div>
+                        </div>
+                        </div>
+                      </div>
+                      </div>
+                    </div>
+                  </div>
+                          
+                          
+              
+
+    
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2><b>Twenty-Five Litres</b></h2>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0"> 
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              {% for litre in twentyfive %}
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{{litre.imageURL}}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>{{litre.name}}</h4>
+                    <p class="item-price"><span>R{{litre.price}}</span></p>
+                    
+                  </div>						
+                </div>
+              </div>
+              {% endfor %}
+                  </div>						
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+        <h2><b>Others</b></h2>
+        <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="0">   
+        <!-- Wrapper for carousel items -->
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="row">
+              {% for litre in other %}
+              <div class="col-sm-3">
+                <div class="thumb-wrapper">
+                  <div class="img-box">
+                    <img src="{{litre.imageURL}}" class="img-fluid" alt="">
+                  </div>
+                  <div class="thumb-content">
+                    <h4>{{litre.name}}</h4>
+                    <p class="item-price"><span>R{{litre.price}}</span></p>
+                    
+                  </div>						
+                </div>
+              </div>
+              {% endfor %}
+                  </div>						
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock content %}
